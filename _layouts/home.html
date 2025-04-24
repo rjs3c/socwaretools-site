@@ -1,0 +1,38 @@
+---
+layout: default
+title: Home
+---
+<div class="home">
+  <section class="tag-link-container">
+    <div class="tag-link-row">
+      <div id="tag-link-all" data-tag="all" class="tag-link-col">
+        <a class="link-item">All</a>
+      </div>
+      <div id="tag-link-defsec" data-tag="defsec" class="tag-link-col">
+        <a class="link-item">Def-Sec</a>
+      </div>
+      <div id="tag-link-offsec" data-tag="offsec" class="tag-link-col">
+        <a class="link-item">Off-Sec</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li
+          {% if post.categories contains "offsec" %}
+            data-category="offsec"
+          {% endif %}
+          {% if post.categories contains "defsec" %}
+          data-category="defsec"
+        {% endif %}
+        >
+          <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <span class="post-tag">#{{ post.tags[0] }}</span>
+          <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+  </section>
+</div>
