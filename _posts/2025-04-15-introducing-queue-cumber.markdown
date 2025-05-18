@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Introducing 🥒 QueueCumber 🥒"
-date:   2025-04-15 
+title:  "Introducing 🥒 QueueCumber 🥒 for APC Queue Injection"
+date:   2025-04-15
 categories: offsec
 tags: windows
 ---
-**Description**: [An APC Queue Injection Proof-of-Concept Written in 🦀](https://github.com/rjs3c/queue-cumber){:target="_blank"}.
+**GitHub**: [An APC Queue Injection Proof-of-Concept Written in 🦀](https://github.com/rjs3c/queue-cumber){:target="_blank"}.
 
 <!--Read more-->
 
